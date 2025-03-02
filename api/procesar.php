@@ -30,7 +30,7 @@ $_SESSION['registro'] = [
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 // Redirigue la página a 'register.php' que verifica el envío del formulario.
-header("Location: register.php");
+header("Location: /api/register.php");
 
 exit;
 
