@@ -118,7 +118,7 @@ body.dark-mode{
     /*background-color: #007bff;*/
     background-color: #1f53c5;
     color: white;
-    border-style: outset;
+    border-style: ridge;
     /*border: none;*/
     padding: 10px;
     cursor: pointer;

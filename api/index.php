@@ -1,4 +1,4 @@
-<!--<?php
+<?php
 session_start(); // Sesion iniciada para guardar los datos del formulario.
 
 // Genera un token CSRF si esté no existe.
@@ -13,7 +13,7 @@ $edad = $_SESSION['registro']['edad'] ?? '';
 $correo = $_SESSION['registro']['correo'] ?? '';
 $contrasenia = $_SESSION['registro']['contrasenia'] ?? '';
 
-?>-->
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -23,22 +23,22 @@ $contrasenia = $_SESSION['registro']['contrasenia'] ?? '';
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Formulario</title>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-        <link rel="stylesheet" href="index.css">
-        <script src="form.js"></script>
+        <link rel="stylesheet" href="/index.css">
+        <script src="/form.js"></script>
     </head>
         <body>
-        <a href="https://github.com/MarioSi3ri" target="_blank" rel="noopener">
-            <img src="image/GitHub_Logo.png" alt="Imagen representativa de GitHub" title="Presiona para acceder a mi repo en GitHub" class="github">
+        <a href="https://github.com/MarioSi3ri" target="_blank" rel="noopener noreferrer">
+            <img src="/image/GitHub_Logo.png" alt="Imagen representativa de GitHub" title="Presiona para acceder a mi repo en GitHub" class="github">
         </a>
         <button id="toggleTheme" title="Cambia el tema de la p&aacute;gina"><span class="material-symbols-outlined">nights_stay</span></button>
-            <form id="Formula" name="Formulario" method="post" action="register.html" class="registro">
+            <form id="Formula" name="Formulario" method="post" action="/api/procesar.php" class="registro">
            <div>
             <h2>📝Registrar alumno (UVEG)</h2>
             </div>
            <div>
-                <!--<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">-->
+                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                 <label for="nombre">Nombre: </label><span class="verif"></span>
-                <input class="input" type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" title="Por favor, escribe tu nombre completo" required autofocus>
+                <input class="input" type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" title="Por favor, escribe tu nombre" required autofocus>
                 <label for="apellidos">Apellidos: </label><span class="verif"></span>
                 <input class="input" type="text" name="apellidos" id="apellidos" placeholder="Ingresa tus apellidos" title="Por favor, escribe tu apellido completo" required>
                 <label for="edad">Edad: </label><span class="verif"></span>

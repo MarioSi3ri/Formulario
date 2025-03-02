@@ -1,4 +1,4 @@
-/* ESTILO DE LA TARJETA QUE MUESTRA EL REGISTRO DEL ALUMNO */
+/* ESTILO DEL FORMULARIO */
 
 * {
     font-family: Arial, Helvetica, sans-serif;
@@ -13,68 +13,39 @@ body {
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+    transition: background 0.3s, color 0.3s;
 }
 
-.tarjeta{
-    width: 680px;
-    padding: 30px;
+.registro{
+    width: 460px;
+    padding: 25px;
     margin-top: 100%;
     margin: auto;
     border-radius: 4px;
     color:aliceblue;
-    box-shadow: 7px 13px 37px #000;
+    box-shadow: 7px 13px 37px #000; /* Sombras del contenedor del formulario */
     background: #24303c;
     position: relative;
 }
 
-img{
-    width: 45vh;
-    height: 40vh;
-    border-radius: 2%;
-    /*box-shadow: 0 4px 8px rgba(33, 3, 227, 0.347);*/
-    box-shadow: 1px 3px 20px #000;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-h2{
-    font-size: 25px;
+.registro h2{
+    font-size: 30px;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(195, 205, 245, 0.4), -2px -2px 4px rgba(0, 179, 255, 0.4); /* Multiples sombras en el texto */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-h3{
-    text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.3); /* Sombras en el texto */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
-p{
-    text-align: center; /* Centra el texto del párrafo */
-}
-
-a{
-    color: rgb(255, 255, 255);
-}
-
-a:hover{
-    color: #95b1eccc; /* Color del texto al ser seleccionado */
-}
-
-.lista{
-    margin-bottom: 8px;
-}
-
-.ul{
-    padding: 0px 0px 0px 30px;
+label{
+    font-weight: 600; /* "Negrita" en el texto titular representativo */
 }
 
 span{
+    font-weight: 600;
+    font-size: 13px;
+    color: #00ff11; /* Color del texto (palomita) en general al enviar correctamente */
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.95);
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -82,36 +53,55 @@ span{
     user-select: none;
 }
 
-.uveg{
-    width: 70px;
-    height: auto;
-    box-shadow: none;
-    border-radius: 10%;
-}
-
-.uveg:hover{
-    transform: scale(0.90); /* Animación de presión al seleccionar la imagen */
-    box-shadow: 0 4px 8px rgba(33, 3, 227, 0.347);
-}
-
-.textImg{
-    position: absolute;
-    top: 72.3%;
-    left: 16.2%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    pointer-events: none;
+.x{
+    color: red; /* Color de la X al faltar datos en el formulario */
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
 }
 
-.botonCard{
+.input{
+    width: 100%;
+    padding: 10px;
+    padding-right: 30px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    margin-top: 5px;
+    font-size: 16px;
+    background-color: aliceblue;
+    border: 1px solid #1f5265;
+}
+
+.icono {
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5rem;
+    right: 6%;
+    height: 32px;
+    width: 32px;
+    padding: 5px 5px 3px 5px;
+    border-radius: 50%;
+    text-shadow: none;
+    transform: translateY(-163%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.icono:active {
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para simular un efecto de presión */
+    /*background-color: rgba(0, 0, 0, 0.055);*/
+    box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.090);
+    background-color: rgba(0, 0, 0, 0.090);
+}
+
+::placeholder {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.boton{
     width: 100%;
     border: none;
     padding: 12px;
@@ -120,47 +110,33 @@ span{
     font-weight: 600;
     color: aliceblue;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: pointer; /* Cambia el puntero por una "manita" señalando */
     background: #1f53c5;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
 }
 
-.botonCard:hover{
+.boton:hover{
     background-color: #0051ff;
     border-color: #1f53c5;
     color: rgb(251, 251, 251);
 }
 
-.botonCard:active{
-    background-color: #1c5d7e;
-    border-color: #1c5d7e;
-    transform: scale(0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.botonDatos{
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-.botonDatos:hover{
-    transform: scale(0.98);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.botonDatos:active{
-    transform: scale(0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.boton:active {
+    /*background-color: #1c5d7e;
+    border-color: #1c5d7e;*/
+    background-color: #02224d;
+    border-color: #1c1f7e;
+    transform: scale(0.95); /* Hace que el botón se presione al fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para simular un efecto de presión */
 }
 
 .material-symbols-outlined{
     color: rgba(0, 0, 0, 0.692)
 }
 
-button{
+input, button{
     transition: background 0.3s, color 0.3s; /* Transicion para el cambio de tema de la página */
 }
 
@@ -169,38 +145,15 @@ body.dark-mode{
     color: #dcdcdc;
 }
 
-.dark-mode button{
+.dark-mode input, .dark-mode button{
     background-color: #444;
     color: #dcdcdc;
     border: 1px solid #777;
 }
 
-.dark-mode .botonDatos{
-    background-color: #dcdcdcc0;
-    color: black;
-}
-
-.dark-mode .botonDatos:hover{
-    transform: scale(0.98);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.388);
-}
-
-.dark-mode .botonDatos:active{
-    transform: scale(0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.388);
-}
-
-.dark-mode h2, .dark-mode h3{
+.dark-mode .registro h2{
     text-shadow: none;
     color: #dcdcdcc0;
-}
-
-.dark-mode .ul{
-    color: #dcdcdc;
-}
-
-.dark-mode p{
-    color: #dcdcdc;
 }
 
 .dark-mode .material-symbols-outlined{
@@ -216,7 +169,7 @@ body.dark-mode{
     /*background-color: #007bff;*/
     background-color: #1f53c5;
     color: white;
-    border-style: outset;
+    border-style: ridge;
     /*border: none;*/
     padding: 10px;
     cursor: pointer;
@@ -290,29 +243,18 @@ body.dark-mode{
     border-color: #000;
 }
 
-
 /* Responsive BETA */
 @media (max-width: 480px) {
-    .tarjeta{
-        width: 60vw;
-    }
-    img{
-        width: 25vw;
-        height: 50vw;
-    }
-    .textImg{
-        top: 70.3%;
-        left: 20.2%;
-        padding: 8px 3px;
+    form{
+        width: 100%;
+        height: 100%;
     }
     #toggleTheme{
         width: fit-content;
-        height: auto;
-        right: 4%;
     }
     .github{
         top: 18px;
-        right: 20%;
-        width: 18%;
+        right: 16%;
+        width: 15%;
     }
 }
