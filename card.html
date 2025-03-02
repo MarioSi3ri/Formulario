@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 session_start();
 
@@ -11,7 +11,7 @@ if (!isset($_SESSION['registro'])){
 // 'array' del documento 'registro' que contiene los datos del formulario.
 $registro = $_SESSION['registro'];
 
-?>
+?>-->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -25,7 +25,7 @@ $registro = $_SESSION['registro'];
         <script src="card.js"></script>
     </head>
         <body>
-        <a href="https://github.com/MarioSi3ri" target="_blank">
+        <a href="https://github.com/MarioSi3ri" target="_blank" rel="noopener">
             <img src="image/GitHub_Logo.png" alt="Imagen representativa de GitHub" title="Presiona para acceder a mi repo en GitHub" class="github">
         </a>
         <button id="toggleTheme" title="Cambia el tema de la p&aacute;gina"><span class="material-symbols-outlined">nights_stay</span></button>
@@ -34,7 +34,7 @@ $registro = $_SESSION['registro'];
                     <thead>
                         <tr>
                         <th><h2>Datos del Alumno</h2></th>
-                        <th><a href="https://uveg.edu.mx/index.php/es/info-isc" target="_blank">
+                        <th><a href="https://uveg.edu.mx/index.php/es/info-isc" target="_blank" rel="noopener">
                         <img src="image/uveg.png" alt="Imagen representativa de la UVEG" title="Presione para más informacion de ISC en UVEG" class="uveg">
                         </a></th>
                         <td class="textImg">Cambiar imagen</td>
@@ -47,10 +47,10 @@ $registro = $_SESSION['registro'];
                             <td>
                             <h3>Universidad Virtual del Estado de Guanajuato (UVEG)</h3>
                         <ul class="ul">
-                           <li class="lista"><strong>Nombre: </strong><?php echo htmlspecialchars ($registro['nombre']); ?></li>
-                           <li class="lista"><strong>Apellidos: </strong><?php echo htmlspecialchars ($registro['apellidos']); ?></p></li>
-                           <li class="lista"><strong>Edad: </strong><?php echo htmlspecialchars ($registro['edad']); ?> a&ntilde;os</p></li>
-                           <li class="lista"><strong>Correo: </strong><?php echo htmlspecialchars ($registro['correo']); ?></p></li>
+                           <li class="lista"><strong>Nombre: </strong> <!-- <?php echo htmlspecialchars ($registro['nombre']); ?> --> </li>
+                           <li class="lista"><strong>Apellidos: </strong> <!-- <?php echo htmlspecialchars ($registro['apellidos']); ?> --> </p></li>
+                           <li class="lista"><strong>Edad: </strong> <!-- <?php echo htmlspecialchars ($registro['edad']); ?> --> a&ntilde;os</p></li>
+                           <li class="lista"><strong>Correo: </strong> <!-- <?php echo htmlspecialchars ($registro['correo']); ?></p> --> </li>
                            <li class="lista"><strong>Ingenier&iacute;a en Sistemas Computacionales </strong></li>
                         <form name="Formulario" method="post" action="datos.php">
                             <li class="lista"><button class="botonDatos" type="submit" title="Presione para modificar sus datos">Editar datos y contrase&ntilde;a</button></li>
@@ -61,7 +61,7 @@ $registro = $_SESSION['registro'];
                         <tr>
                         <form name="Registro" method="post" action="index.php">
                             <td><button class="botonCard" type="submit" title="Presione para crear un nuevo formulario">Crear nuevo registro</button></td>
-                            <td><p>"Aceptaci&oacute;n del <a href="https://uveg.edu.mx/modules/mod_preregistro/resources/images/aviso_integrado.pdf" target="_blank" title="Presione para leer el aviso de privacidad">Aviso de Privacidad</a>"</p></td>
+                            <td><p>"Aceptaci&oacute;n del <a href="https://uveg.edu.mx/modules/mod_preregistro/resources/images/aviso_integrado.pdf" target="_blank" rel="noopener" title="Presione para leer el aviso de privacidad">Aviso de Privacidad</a>"</p></td>
                         </form>
                         </tr>
                     </tbody>
