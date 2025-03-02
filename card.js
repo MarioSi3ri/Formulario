@@ -56,8 +56,3 @@ document.addEventListener("DOMContentLoaded", function(){
     applySavedTheme();
     toggleButton.addEventListener("click", toggleTheme);
 });
-
-setTimeout(() => {
-    window.location.reload();
-}, 5000);
-window.onload = displayResults;
