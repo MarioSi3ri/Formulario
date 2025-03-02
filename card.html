@@ -52,14 +52,14 @@ $registro = $_SESSION['registro'];
                            <li class="lista"><strong>Edad: </strong> <!-- <?php echo htmlspecialchars ($registro['edad']); ?> --> a&ntilde;os</p></li>
                            <li class="lista"><strong>Correo: </strong> <!-- <?php echo htmlspecialchars ($registro['correo']); ?></p> --> </li>
                            <li class="lista"><strong>Ingenier&iacute;a en Sistemas Computacionales </strong></li>
-                        <form name="Formulario" method="post" action="datos.php">
-                            <li class="lista"><button class="botonDatos" type="submit" title="Presione para modificar sus datos">Editar datos y contrase&ntilde;a</button></li>
+                        <!--<form name="Formulario" method="post" action="datos.html">-->
+                            <li class="lista"><form name="Formulario" method="post" action="datos.html"></form><button class="botonDatos" type="submit" title="Presione para modificar sus datos">Editar datos y contrase&ntilde;a</button></li>
                         </form>
                         </ul>
                             </td>
                         </tr>
                         <tr>
-                        <form name="Registro" method="post" action="index.php">
+                        <form name="Registro" method="post" action="index.html">
                             <td><button class="botonCard" type="submit" title="Presione para crear un nuevo formulario">Crear nuevo registro</button></td>
                             <td><p>"Aceptaci&oacute;n del <a href="https://uveg.edu.mx/modules/mod_preregistro/resources/images/aviso_integrado.pdf" target="_blank" rel="noopener" title="Presione para leer el aviso de privacidad">Aviso de Privacidad</a>"</p></td>
                         </form>
