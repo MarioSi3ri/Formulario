@@ -2,10 +2,31 @@
   "functions": {
     "api/*.php": {
       "runtime": "vercel-php@0.7.3"
+    },
+    "api/index.php": {
+      "runtime": "vercel-php@0.7.3"
+    },
+    "api/register.php": {
+      "runtime": "vercel-php@0.7.3"
+    },
+    "api/procesar.php": {
+      "runtime": "vercel-php@0.7.3"
+    },
+    "api/datos.php": {
+      "runtime": "vercel-php@0.7.3"
+    },
+    "api/card.php": {
+      "runtime": "vercel-php@0.7.3"
     }
   },
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/(.*)", "dest": "/public/$1" }
+    { "src": "/(.*)", "dest": "/public/$1" },
+    { "src": "/(.*)", "dest": "/public/form.js" },
+    { "src": "/(.*)", "dest": "/public/card.js" },
+    { "src": "/(.*)", "dest": "/public/index.css" },
+    { "src": "/(.*)", "dest": "/public/register.css" },
+    { "src": "/(.*)", "dest": "/public/card.css" },
+    { "src": "/(.*)", "dest": "/public/image" }
   ]
 }
