@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-var_dump($_SESSION['csrf_token']);
 
 // Verifica que exista un registro en la sesión con PHP.
 if (!isset($_SESSION['registro'])){

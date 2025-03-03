@@ -6,7 +6,6 @@ session_start(); // Sesion iniciada para guardar los datos del formulario.
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
-var_dump($_SESSION['csrf_token']);
 
 // Recupera los datos del formulario guardados en la sesión. Si no hay datos, los campos estarán vacíos.
 $nombre = $_SESSION['registro']['nombre'] ?? '';
