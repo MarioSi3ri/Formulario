@@ -3,12 +3,12 @@
 session_start(); // Sesion iniciada para guardar los datos del formulario.
 
 // Validar token 'CSRF'.
-/*if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
     die("Error de seguridad: Token CSRF no válido.");
 }
 
 // Destruye el token después de usarlo para mayor seguridad.
-unset($_SESSION['csrf_token']);*/
+unset($_SESSION['csrf_token']);
 
 // Captura de los datos del formulario con PHP.
 $nombre = isset($_POST['nombre']) ? trim($_POST['nombre']) : '';
@@ -27,7 +27,7 @@ $_SESSION['registro'] = [
 ];
 
 // Regenera el token para evitar la reutilización.
-/*$_SESSION['csrf_token'] = bin2hex(random_bytes(32));*/
+$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 // Redirigue la página a 'register.php' que verifica el envío del formulario.
 header("Location: /api/register.php");
