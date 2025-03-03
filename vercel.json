@@ -2,21 +2,6 @@
   "functions": {
     "api/*.php": {
       "runtime": "vercel-php@0.7.3"
-    },
-    "api/index.php": {
-      "runtime": "vercel-php@0.7.3"
-    },
-    "api/register.php": {
-      "runtime": "vercel-php@0.7.3"
-    },
-    "api/procesar.php": {
-      "runtime": "vercel-php@0.7.3"
-    },
-    "api/datos.php": {
-      "runtime": "vercel-php@0.7.3"
-    },
-    "api/card.php": {
-      "runtime": "vercel-php@0.7.3"
     }
   },
   "routes": [

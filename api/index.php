@@ -36,7 +36,7 @@ $contrasenia = $_SESSION['registro']['contrasenia'] ?? '';
             <h2>📝Registrar alumno (UVEG)</h2>
             </div>
            <div>
-                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                
                 <label for="nombre">Nombre: </label><span class="verif"></span>
                 <input class="input" type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" title="Por favor, escribe tu nombre" required autofocus>
                 <label for="apellidos">Apellidos: </label><span class="verif"></span>
