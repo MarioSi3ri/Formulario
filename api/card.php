@@ -1,7 +1,7 @@
 <?php
-ini_set('session.cookie_lifetime', 3600); // 1 hora
-ini_set('session.gc_maxlifetime', 3600); // 1 hora
+
 session_start();
+var_dump($_SESSION['csrf_token']);
 
 // Verifica que exista un registro en la sesión con PHP.
 if (!isset($_SESSION['registro'])){
