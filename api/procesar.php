@@ -1,5 +1,6 @@
 <?php
-
+ini_set('session.cookie_lifetime', 3600); // 1 hora
+ini_set('session.gc_maxlifetime', 3600); // 1 hora
 session_start(); // Sesion iniciada para guardar los datos del formulario.
 
 // Validar token 'CSRF'.

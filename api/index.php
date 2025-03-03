@@ -1,4 +1,6 @@
 <?php
+ini_set('session.cookie_lifetime', 3600); // 1 hora
+ini_set('session.gc_maxlifetime', 3600); // 1 hora
 session_start(); // Sesion iniciada para guardar los datos del formulario.
 
 // Genera un token CSRF si esté no existe.
@@ -7,11 +9,11 @@ if (empty($_SESSION['csrf_token'])) {
 }
 
 // Recupera los datos del formulario guardados en la sesión. Si no hay datos, los campos estarán vacíos.
-/*$nombre = $_SESSION['registro']['nombre'] ?? '';
+$nombre = $_SESSION['registro']['nombre'] ?? '';
 $apellidos = $_SESSION['registro']['apellidos'] ?? '';
 $edad = $_SESSION['registro']['edad'] ?? '';
 $correo = $_SESSION['registro']['correo'] ?? '';
-$contrasenia = $_SESSION['registro']['contrasenia'] ?? '';*/
+$contrasenia = $_SESSION['registro']['contrasenia'] ?? '';
 
 ?>
 
