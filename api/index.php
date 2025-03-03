@@ -28,7 +28,7 @@ $contrasenia = $_SESSION['registro']['contrasenia'] ?? '';
     </head>
         <body>
         <a href="https://github.com/MarioSi3ri" target="_blank" rel="noopener noreferrer">
-            <img src="image/GitHub_Logo.png" alt="Imagen representativa de GitHub" title="Presiona para acceder a mi repo en GitHub" class="github">
+            <img src="/image/GitHub_Logo.png" alt="Imagen representativa de GitHub" title="Presiona para acceder a mi repo en GitHub" class="github">
         </a>
         <button id="toggleTheme" title="Cambia el tema de la p&aacute;gina"><span class="material-symbols-outlined">nights_stay</span></button>
             <form id="Formula" name="Formulario" method="post" action="/api/procesar.php" class="registro">
@@ -36,7 +36,7 @@ $contrasenia = $_SESSION['registro']['contrasenia'] ?? '';
             <h2>📝Registrar alumno (UVEG)</h2>
             </div>
            <div>
-                
+                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                 <label for="nombre">Nombre: </label><span class="verif"></span>
                 <input class="input" type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" title="Por favor, escribe tu nombre" required autofocus>
                 <label for="apellidos">Apellidos: </label><span class="verif"></span>
