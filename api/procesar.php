@@ -27,7 +27,7 @@ $_SESSION['registro'] = [
 ];
 
 // Regenera el token para evitar la reutilización.
-$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+/*$_SESSION['csrf_token'] = bin2hex(random_bytes(32));*/
 
 // Redirigue la página a 'register.php' que verifica el envío del formulario.
 header("Location: /api/register.php");
