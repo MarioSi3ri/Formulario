@@ -23,15 +23,15 @@ $contrasenia = $_SESSION['registro']['contrasenia'] ?? '';
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Formulario</title>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-        <link rel="stylesheet" href="/index.css">
-        <script src="/form.js"></script>
+        <link rel="stylesheet" href="index.css">
+        <script src="form.js"></script>
     </head>
         <body>
         <a href="https://github.com/MarioSi3ri" target="_blank" rel="noopener noreferrer">
-            <img src="/image/GitHub_Logo.png" alt="Imagen representativa de GitHub" title="Presiona para acceder a mi repo en GitHub" class="github">
+            <img src="image/GitHub_Logo.png" alt="Imagen representativa de GitHub" title="Presiona para acceder a mi repo en GitHub" class="github">
         </a>
         <button id="toggleTheme" title="Cambia el tema de la p&aacute;gina"><span class="material-symbols-outlined">nights_stay</span></button>
-            <form id="Formula" name="Formulario" method="post" action="/api/procesar.php" class="registro">
+            <form id="Formula" name="Formulario" method="post" action="procesar.php" class="registro">
            <div>
             <h2>📝Registrar alumno (UVEG)</h2>
             </div>
